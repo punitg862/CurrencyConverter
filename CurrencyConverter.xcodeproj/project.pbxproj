@@ -26,7 +26,6 @@
 		EEE265CC29294723006A9EB3 /* Timeseries.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE265CB29294723006A9EB3 /* Timeseries.swift */; };
 		EEE265CE29294E21006A9EB3 /* Fluctuation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE265CD29294E21006A9EB3 /* Fluctuation.swift */; };
 		EEE265D12929510B006A9EB3 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE265D02929510B006A9EB3 /* Extension.swift */; };
-		EEE265D5292957BF006A9EB3 /* bbbb.json in Resources */ = {isa = PBXBuildFile; fileRef = EEE265D4292957BF006A9EB3 /* bbbb.json */; };
 		EEE265D929295E64006A9EB3 /* historicalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE265D829295E64006A9EB3 /* historicalTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,7 +70,6 @@
 		EEE265CB29294723006A9EB3 /* Timeseries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeseries.swift; sourceTree = "<group>"; };
 		EEE265CD29294E21006A9EB3 /* Fluctuation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fluctuation.swift; sourceTree = "<group>"; };
 		EEE265D02929510B006A9EB3 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
-		EEE265D4292957BF006A9EB3 /* bbbb.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = bbbb.json; sourceTree = "<group>"; };
 		EEE265D829295E64006A9EB3 /* historicalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = historicalTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,7 +124,6 @@
 				EEE265882927B210006A9EB3 /* AppDelegate.swift */,
 				EEE2658A2927B210006A9EB3 /* SceneDelegate.swift */,
 				EEE265B82927B24C006A9EB3 /* Common-Currency.json */,
-				EEE265D4292957BF006A9EB3 /* bbbb.json */,
 				EEE265D629295E2E006A9EB3 /* View */,
 				EEE265C42927C2A6006A9EB3 /* Constant */,
 				EEE265BD2927BA20006A9EB3 /* Model */,
@@ -315,7 +312,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEE265D5292957BF006A9EB3 /* bbbb.json in Resources */,
 				EEE265952927B212006A9EB3 /* LaunchScreen.storyboard in Resources */,
 				EEE265B92927B24C006A9EB3 /* Common-Currency.json in Resources */,
 				EEE265922927B212006A9EB3 /* Assets.xcassets in Resources */,

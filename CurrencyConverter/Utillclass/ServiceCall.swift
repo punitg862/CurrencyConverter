@@ -18,15 +18,15 @@ class ServiceCall {
     
     
     func getConvertionData(param:Dictionary<String,String>?, success:@escaping (CurrencyConvertResponse?,Bool)->()) {
-//        callHttpRequest(method: .GET, path: url.currencyConverterURL.rawValue, parameters: param, success:{  (data, status) in
-//            if status{
-//                if let data, let json = try? JSONDecoder().decode(CurrencyConvertResponse.self, from: data) {
-//                    success(json, true)
-//                }
-//            } else {
-//                success(nil,false)
-//            }
-//        })
+        callHttpRequest(method: .GET, path: url.currencyConverterURL.rawValue, parameters: param, success:{  (data, status) in
+            if status{
+                if let data, let json = try? JSONDecoder().decode(CurrencyConvertResponse.self, from: data) {
+                    success(json, true)
+                }
+            } else {
+                success(nil,false)
+            }
+        })
     }
     
     func getTimeseriesData(param:Dictionary<String,String>?, success:@escaping (Timeseries?,Bool)->()) {
