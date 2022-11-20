@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EE84E645292A5104004F1F86 /* CurrencyConverterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE84E644292A5104004F1F86 /* CurrencyConverterViewModel.swift */; };
+		EED19604292A845D00E41C90 /* HistoricalDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED19603292A845D00E41C90 /* HistoricalDataViewModel.swift */; };
 		EEE265892927B210006A9EB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE265882927B210006A9EB3 /* AppDelegate.swift */; };
 		EEE2658B2927B210006A9EB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE2658A2927B210006A9EB3 /* SceneDelegate.swift */; };
 		EEE2658D2927B210006A9EB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE2658C2927B210006A9EB3 /* ViewController.swift */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		EE84E644292A5104004F1F86 /* CurrencyConverterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterViewModel.swift; sourceTree = "<group>"; };
+		EED19603292A845D00E41C90 /* HistoricalDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalDataViewModel.swift; sourceTree = "<group>"; };
 		EEE265852927B210006A9EB3 /* CurrencyConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEE265882927B210006A9EB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEE2658A2927B210006A9EB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				EE84E644292A5104004F1F86 /* CurrencyConverterViewModel.swift */,
+				EED19603292A845D00E41C90 /* HistoricalDataViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				EEE2658D2927B210006A9EB3 /* ViewController.swift in Sources */,
 				EEE265CE29294E21006A9EB3 /* Fluctuation.swift in Sources */,
 				EEE265D12929510B006A9EB3 /* Extension.swift in Sources */,
+				EED19604292A845D00E41C90 /* HistoricalDataViewModel.swift in Sources */,
 				EEE265D929295E64006A9EB3 /* historicalTableViewCell.swift in Sources */,
 				EEE265BF2927BA44006A9EB3 /* Currency.swift in Sources */,
 				EEE265C82927C9DE006A9EB3 /* CurrencyConvertResponse.swift in Sources */,

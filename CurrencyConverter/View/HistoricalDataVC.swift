@@ -13,27 +13,13 @@ class HistoricalDataVC: UIViewController {
     
     var base = ""
     var list: Timeseries?
-
+    var vm = HistoricalDataViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        vm.delegate = self
         self.navigationItem.title = "\(base) last 3 days"
-        callService()
-    }
-
-    func callService() {
-        let endDate = Date().getFormattedDate(format: "yyyy-MM-dd")
-        let startDate = Date().dayBefore.getFormattedDate(format: "yyyy-MM-dd")
-        
-        let param = Dictionary(dictionaryLiteral: ("start_date",startDate),("end_date", endDate),("base",base))
-
-        ServiceCall.shared.getTimeseriesData(param: param) { response, status in
-            if status, let response {
-                self.list = response
-            }
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        }
+        vm.callService(base)
     }
 }
 
@@ -73,4 +59,13 @@ extension HistoricalDataVC: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
-
+extension HistoricalDataVC: HistoricalDataDelegate {
+    func getHistoricalData(response: Timeseries?) {
+        if let response {
+            self.list = response
+        }
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+}
