@@ -31,7 +31,6 @@ class CurrencyConverterViewModel: NSObject {
     
     func callService(from: String, to: String, amount: String, type: isType) {
         let param = Dictionary(dictionaryLiteral: ("from",from),("to", to),("amount",amount))
-        print(param)
         ServiceCall.shared.getConvertionData(param: param) { response, status in
             self.delegate?.getResponseCurrency(response: response, type: type)
 

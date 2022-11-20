@@ -26,19 +26,6 @@ class Utillclass: NSObject {
         }
     }
     
-    func getJson2(complition: @escaping (Timeseries) -> ()){
-        if let path = Bundle.main.path(forResource: "bbbb", ofType: "json") {
-            do {
-                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                if let jsonPetitions = try? JSONDecoder().decode(Timeseries.self, from: data) {
-                    complition(jsonPetitions)
-                }
-            } catch {
-                print(error.localizedDescription)
-            }
-        }
-    }
-    
     func alertWithCustomMessage(_ msg: String, vc: UIViewController) {
         let alertController = UIAlertController.init(title: nil, message: msg, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OKAY", style: .cancel))
