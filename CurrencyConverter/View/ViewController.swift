@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
         
     var localList = Array<String>()
+    var vm = CurrencyConverterViewModel()
     
     @IBOutlet weak var tblViewFrom: UITableView!
     @IBOutlet weak var tblViewTo: UITableView!
@@ -37,7 +38,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        vm.delegate = self
         Utillclass.shared.getJson { (list: Dictionary<String, Currencydetails>) in
             list.forEach { (key: String, value: Currencydetails) in
                 self.localList.append(key)
@@ -46,19 +47,19 @@ class ViewController: UIViewController {
         }
         fromTblviewHidden = true
         toTblviewHidden = true
-        addToolBar(textfield: textfieldFrom)
-        addToolBar(textfield: textfieldTo)
+        vm.addToolBar(textfield: textfieldFrom)
+        vm.addToolBar(textfield: textfieldTo)
     }
     
     @IBAction func btn_ToClicked(_ sender: UIButton) {
         fromTblviewHidden = true
-        doneTapped()
+        keyboardDoneTapped()
         toTblviewHidden = !toTblviewHidden
     }
     
     @IBAction func btn_FromClicked(_ sender: UIButton) {
         toTblviewHidden = true
-        doneTapped()
+        keyboardDoneTapped()
         fromTblviewHidden = !fromTblviewHidden
     }
     
@@ -69,7 +70,7 @@ class ViewController: UIViewController {
         guard fromStatus, toStatus, btnFromText != btnToText else { return }
         guard let textFrom = textfieldFrom.text, !textFrom.isEmpty else { return }
         
-        self.callService(from: btnToText!, to: btnFromText!, amount: textFrom, type: .TO)
+        self.vm.callService(from: btnToText!, to: btnFromText!, amount: textFrom, type: .TO)
         
         buttonFrom.setTitle(btnToText, for: .normal)
         buttonTo.setTitle(btnFromText, for: .normal)
@@ -90,7 +91,6 @@ class ViewController: UIViewController {
         
     }
     
-    
     @IBAction func textFieldFromDidEnd(_ sender: UITextField) {
         if sender.text?.count ?? 0 == 0 {
             sender.text = "1"
@@ -101,7 +101,7 @@ class ViewController: UIViewController {
         
         guard fromStatus, toStatus, btnFromText != btnToText else { return }
         
-        self.callService(from: btnFromText!, to: btnToText!, amount: sender.text ?? "1", type: .TO)
+        self.vm.callService(from: btnFromText!, to: btnToText!, amount: sender.text ?? "1", type: .TO)
     }
     
     @IBAction func textFieldToDidEnd(_ sender: UITextField) {
@@ -115,7 +115,7 @@ class ViewController: UIViewController {
         
         guard fromStatus, toStatus, btnFromText != btnToText else { return }
         
-        self.callService(from: btnToText!, to: btnFromText!, amount: sender.text ?? "1", type: .FROM)
+        self.vm.callService(from: btnToText!, to: btnFromText!, amount: sender.text ?? "1", type: .FROM)
     }
     
     @IBAction func textFieldFromTouchUpInside(_ sender: UITextField) {
@@ -150,13 +150,13 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             
             let (toStatus, btnToText) = btnToValidation()
             guard toStatus, let textFrom = textfieldFrom.text, !textFrom.isEmpty else { return }
-            self.callService(from: self.localList[indexPath.row], to: btnToText!, amount: textFrom, type: .TO)
+            self.vm.callService(from: self.localList[indexPath.row], to: btnToText!, amount: textFrom, type: .TO)
         } else {
             buttonTo.setTitle(self.localList[indexPath.row], for: .normal)
             toTblviewHidden = true
             let (fromStatus, btnFromText) = btnFromValidation()
             guard fromStatus, let textFrom = textfieldFrom.text, !textFrom.isEmpty else { return }
-            self.callService(from: btnFromText!, to: self.localList[indexPath.row], amount: textFrom, type: .TO)
+            self.vm.callService(from: btnFromText!, to: self.localList[indexPath.row], amount: textFrom, type: .TO)
         }
         
         
@@ -187,38 +187,24 @@ extension ViewController: UITextFieldDelegate {
         }
         return true
     }
-    
-    func callService(from: String, to: String, amount: String, type: isType) {
-        let param = Dictionary(dictionaryLiteral: ("from",from),("to", to),("amount",amount))
-        print(param)
-        ServiceCall.shared.getConvertionData(param: param) { response, status in
-            if let response {
-                DispatchQueue.main.async {
-                    if type == .FROM {
-                        self.textfieldFrom.text = String(format: "%.2f", Double(response.result))
-                    }else {
-                        self.textfieldTo.text = String(format: "%.2f", Double(response.result))
-                    }
+}
+
+
+extension ViewController:  CurrencyConverterDelegate {
+    func getResponseCurrency(response: CurrencyConvertResponse?, type: isType)  {
+        if let response {
+            DispatchQueue.main.async {
+                if type == .FROM {
+                    self.textfieldFrom.text = String(format: "%.2f", Double(response.result))
+                }else {
+                    self.textfieldTo.text = String(format: "%.2f", Double(response.result))
                 }
             }
         }
     }
     
-    func addToolBar( textfield: UITextField) {
-        let bar = UIToolbar()
-        let reset = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneTapped))
-        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        bar.items = [flexibleSpace,reset]
-        bar.sizeToFit()
-        textfield.inputAccessoryView = bar
-    }
-    
-    @objc func doneTapped() {
+    func keyboardDoneTapped() {
         self.view.endEditing(true)
     }
-    
-    enum isType:String {
-        case FROM = "from"
-        case TO = "to"
-    }
 }
+

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE84E645292A5104004F1F86 /* CurrencyConverterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE84E644292A5104004F1F86 /* CurrencyConverterViewModel.swift */; };
 		EEE265892927B210006A9EB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE265882927B210006A9EB3 /* AppDelegate.swift */; };
 		EEE2658B2927B210006A9EB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE2658A2927B210006A9EB3 /* SceneDelegate.swift */; };
 		EEE2658D2927B210006A9EB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE2658C2927B210006A9EB3 /* ViewController.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE84E644292A5104004F1F86 /* CurrencyConverterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterViewModel.swift; sourceTree = "<group>"; };
 		EEE265852927B210006A9EB3 /* CurrencyConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEE265882927B210006A9EB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEE2658A2927B210006A9EB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +100,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE84E6432929FBFE004F1F86 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EE84E644292A5104004F1F86 /* CurrencyConverterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		EEE2657C2927B210006A9EB3 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +134,7 @@
 				EEE265882927B210006A9EB3 /* AppDelegate.swift */,
 				EEE2658A2927B210006A9EB3 /* SceneDelegate.swift */,
 				EEE265B82927B24C006A9EB3 /* Common-Currency.json */,
+				EE84E6432929FBFE004F1F86 /* ViewModel */,
 				EEE265D629295E2E006A9EB3 /* View */,
 				EEE265C42927C2A6006A9EB3 /* Constant */,
 				EEE265BD2927BA20006A9EB3 /* Model */,
@@ -348,6 +359,7 @@
 				EEE265BF2927BA44006A9EB3 /* Currency.swift in Sources */,
 				EEE265C82927C9DE006A9EB3 /* CurrencyConvertResponse.swift in Sources */,
 				EEE265892927B210006A9EB3 /* AppDelegate.swift in Sources */,
+				EE84E645292A5104004F1F86 /* CurrencyConverterViewModel.swift in Sources */,
 				EEE265C32927C1DC006A9EB3 /* ServiceCall.swift in Sources */,
 				EEE2658B2927B210006A9EB3 /* SceneDelegate.swift in Sources */,
 				EEE265CA29294659006A9EB3 /* HistoricalDataVC.swift in Sources */,
