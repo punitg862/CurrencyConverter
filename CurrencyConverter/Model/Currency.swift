@@ -13,14 +13,6 @@ struct Currencydetails: Codable {
     let decimalDigits: Int
     let rounding: Double
     let code, namePlural: String
-
-    enum CodingKeys: String, CodingKey {
-        case symbol, name
-        case symbolNative = "symbol_native"
-        case decimalDigits = "decimal_digits"
-        case rounding, code
-        case namePlural = "name_plural"
-    }
 }
 
 

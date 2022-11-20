@@ -31,8 +31,10 @@ class ServiceCall {
     
     func getTimeseriesData(param:Dictionary<String,String>?, success:@escaping (Timeseries?,Bool)->()) {
         callHttpRequest(method: .GET, path: url.timeseries.rawValue, parameters: param, success:{  (data, status) in
-            if status{
-                if  let data, let timeseries = try? JSONDecoder().decode(Timeseries.self, from: data) {
+            if status {
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                if  let data, let timeseries = try? decoder.decode(Timeseries.self, from: data) {
                     success(timeseries, true)
                 }
             } else {
@@ -44,7 +46,9 @@ class ServiceCall {
     func getFluctuationData(param:Dictionary<String,String>?, success:@escaping (Fluctuation?,Bool)->()) {
         callHttpRequest(method: .GET, path: url.fluctuation.rawValue, parameters: param, success:{  (data, status) in
             if status{
-                if  let data, let timeseries = try? JSONDecoder().decode(Fluctuation.self, from: data) {
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                if  let data, let timeseries = try? decoder.decode(Fluctuation.self, from: data) {
                     success(timeseries, true)
                 }
             } else {

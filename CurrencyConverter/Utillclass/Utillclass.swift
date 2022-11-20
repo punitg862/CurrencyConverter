@@ -17,7 +17,9 @@ class Utillclass: NSObject {
         if let path = Bundle.main.path(forResource: "Common-Currency", ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                if let jsonPetitions = try? JSONDecoder().decode(Dictionary<String, Currencydetails>.self, from: data) {
+                let decorder = JSONDecoder()
+                decorder.keyDecodingStrategy = .convertFromSnakeCase
+                if let jsonPetitions = try? decorder.decode(Dictionary<String, Currencydetails>.self, from: data) {
                     complition(jsonPetitions)
                 }
             } catch {
