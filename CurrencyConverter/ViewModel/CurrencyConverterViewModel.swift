@@ -7,14 +7,19 @@
 
 import UIKit
 
-protocol CurrencyConverterDelegate : AnyObject {
+protocol CurrencyConverterDelegate  {
     func keyboardDoneTapped()
     func getResponseCurrency(response: CurrencyConvertResponse?, type: isType)
 }
 
+extension CurrencyConverterDelegate  {
+    func keyboardDoneTapped() { }
+    func getResponseCurrency(response: CurrencyConvertResponse?, type: isType) { }
+}
+
 class CurrencyConverterViewModel: NSObject {
 
-    weak var delegate : CurrencyConverterDelegate?
+    var delegate : CurrencyConverterDelegate?
     
     func addToolBar( textfield: UITextField) {
         let bar = UIToolbar()

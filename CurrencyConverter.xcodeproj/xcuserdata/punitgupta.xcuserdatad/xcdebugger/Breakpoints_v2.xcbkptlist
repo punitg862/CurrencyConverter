@@ -52,5 +52,143 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "80698C84-9880-481C-B205-16ECBA281DEF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CurrencyConverterTests/CurrencyConverterTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "getResponseCurrency(response:type:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "80698C84-9880-481C-B205-16ECBA281DEF - 21ae69caa842c3d9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CurrencyConverterTests.CurrencyConverterTests.getResponseCurrency(response: Swift.Optional&lt;CurrencyConverter.CurrencyConvertResponse&gt;, type: CurrencyConverter.isType) -&gt; ()"
+                  moduleName = "CurrencyConverterTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Development/Andela/CurrencyConverter/CurrencyConverterTests/CurrencyConverterTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "80698C84-9880-481C-B205-16ECBA281DEF - 21ae69caa842c3d9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CurrencyConverterTests.CurrencyConverterTests.getResponseCurrency(response: Swift.Optional&lt;CurrencyConverter.CurrencyConvertResponse&gt;, type: CurrencyConverter.isType) -&gt; ()"
+                  moduleName = "CurrencyConverterTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Development/Andela/CurrencyConverter/CurrencyConverterTests/CurrencyConverterTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  uuid = "80698C84-9880-481C-B205-16ECBA281DEF - 21ae69caa842c3d9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CurrencyConverterTests.CurrencyConverterTests.getResponseCurrency(response: Swift.Optional&lt;CurrencyConverter.CurrencyConvertResponse&gt;, type: CurrencyConverter.isType) -&gt; ()"
+                  moduleName = "CurrencyConverterTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Development/Andela/CurrencyConverter/CurrencyConverterTests/CurrencyConverterTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "80698C84-9880-481C-B205-16ECBA281DEF - 21ae69caa842c3d9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CurrencyConverterTests.CurrencyConverterTests.getResponseCurrency(response: Swift.Optional&lt;CurrencyConverter.CurrencyConvertResponse&gt;, type: CurrencyConverter.isType) -&gt; ()"
+                  moduleName = "CurrencyConverterTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Development/Andela/CurrencyConverter/CurrencyConverterTests/CurrencyConverterTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "80698C84-9880-481C-B205-16ECBA281DEF - 21ae69caa842c25d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CurrencyConverterTests.CurrencyConverterTests.getResponseCurrency(response: Swift.Optional&lt;CurrencyConverter.CurrencyConvertResponse&gt;, type: CurrencyConverter.isType) -&gt; ()"
+                  moduleName = "CurrencyConverterTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Development/Andela/CurrencyConverter/CurrencyConverterTests/CurrencyConverterTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "80698C84-9880-481C-B205-16ECBA281DEF - 21ae69caa842c25d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CurrencyConverterTests.CurrencyConverterTests.getResponseCurrency(response: Swift.Optional&lt;CurrencyConverter.CurrencyConvertResponse&gt;, type: CurrencyConverter.isType) -&gt; ()"
+                  moduleName = "CurrencyConverterTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Development/Andela/CurrencyConverter/CurrencyConverterTests/CurrencyConverterTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  uuid = "80698C84-9880-481C-B205-16ECBA281DEF - 21ae69caa842c33a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CurrencyConverterTests.CurrencyConverterTests.getResponseCurrency(response: Swift.Optional&lt;CurrencyConverter.CurrencyConvertResponse&gt;, type: CurrencyConverter.isType) -&gt; ()"
+                  moduleName = "CurrencyConverterTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Development/Andela/CurrencyConverter/CurrencyConverterTests/CurrencyConverterTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "80698C84-9880-481C-B205-16ECBA281DEF - 21ae69caa842c33a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CurrencyConverterTests.CurrencyConverterTests.getResponseCurrency(response: Swift.Optional&lt;CurrencyConverter.CurrencyConvertResponse&gt;, type: CurrencyConverter.isType) -&gt; ()"
+                  moduleName = "CurrencyConverterTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Development/Andela/CurrencyConverter/CurrencyConverterTests/CurrencyConverterTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "96">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

@@ -8,10 +8,38 @@
 import XCTest
 @testable import CurrencyConverter
 
-final class CurrencyConverterTests: XCTestCase {
+final class CurrencyConverterTests: XCTestCase, CurrencyConverterDelegate, HistoricalDataDelegate {
+    
+    func getHistoricalData(response: CurrencyConverter.Timeseries?) {
+        if let response {
+            XCTAssertEqual(response.rates.count, 3)
+        }
+    }
+    
+    
+    func getResponseCurrency(response: CurrencyConverter.CurrencyConvertResponse?, type: CurrencyConverter.isType) {
+        if let response {
+            XCTAssertNotNil(response.result)
+        }
+    }
+    
 
+    var vm = CurrencyConverterViewModel()
+    var historicalvm = HistoricalDataViewModel()
+    
+    func testConvertCurrency() {
+        
+        self.vm.callService(from: "AED", to: "INR", amount: "5", type: .FROM)
+    }
+    
+    func testHistoricalData() {
+        self.historicalvm.callService("AED")
+    }
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        vm.delegate = self
+        historicalvm.delegate = self
     }
 
     override func tearDownWithError() throws {
